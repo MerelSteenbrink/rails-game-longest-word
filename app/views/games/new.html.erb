@@ -1,2 +1,18 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<h1>New Game</h1>
+
+<p>
+	<ul class="letters">
+	<% @letters.each  do |letter| %>
+		<li><%= letter %> </li>
+	<% end %>
+	</ul>
+</p>
+
+<p>What is the longest word you can find using these letters?</p>
+
+<p>
+	<form action="/answer" method="post" class="form-inline">
+  <input type="text" name="question" placeholder="Type your word here.">
+  <input type="submit" value="BOOM!" class="btn btn-default">
+</form>
+</p>
